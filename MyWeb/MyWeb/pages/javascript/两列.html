@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style type="text/css">
+        body,html{margin:0;padding:0px;}
+        #top,#bottom{border:1px #000000 solid;height: 45px;}
+        #sideBox{float: left;width:200px;border:1px red solid;}
+        #sideBox li{list-style-type: none;}
+        #content{border:1px green solid;  margin-left: 202px;height: 500px;margin-right: 202px;position: relative;}
+        .clear{clear:both;}
+        #right{border: 1px red solid;float:right;width:200px;height: 600px;margin-left: -200px;}
+
+        .contentText{  margin-left: 20px;
+            margin-right: 20px;
+            height: 19px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 1px #ccc solid;
+            margin-top: 10px;
+            padding: 3px;
+            border-radius: 3px;}
+
+        #content img{
+            width: 100%;
+            box-sizing: border-box;
+            /* padding: 20px; */
+            border: 20px #fff solid;
+        }
+
+        #absoluteAuto{position: absolute;border:1px red solid; left:20px;right:20px;   }
+
+
+        #mediaDiv{border:1px red solid;margin:10px; border-radius: 3px;}
+
+        @media screen and (max-width: 600px) {
+            #mediaDiv{border-color:black; display:none;}
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+
+
+<div id="top">头部
+</div>
+
+<div id="cententBox">
+
+    <div id="sideBox">
+        <ul>
+            <li>列表一</li>
+            <li>列表一</li>
+            <li>列表一</li>
+            <li>列表一</li><li>列表一</li>
+            <li>列表一</li>
+            <li>列表一</li><li>列表一</li>
+        </ul>
+    </div>
+
+
+
+    <div id="right">11111111111</div>
+    <div id="content">
+
+        <div id="mediaDiv">
+            我是mediaDiv我是mediaDiv我是mediaDiv我是mediaDiv我是mediaDiv我是mediaDiv
+            我是mediaDiv我是mediaDiv我是mediaDiv我是mediaDiv我是mediaDiv我是mediaDiv我是mediaDiv
+            我是mediaDiv我是mediaDiv我是mediaDiv我是mediaDiv我是mediaDiv
+
+        </div>
+
+
+
+        <div class="contentText">
+            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+        </div>
+        <div class="contentText">
+            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+        </div>
+        <div class="contentText">
+            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+        </div>
+        <div class="contentText">
+            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+        </div>
+        <div class="contentText">
+            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+        </div>
+
+
+        <img src="../../images/杨紫.jpg">
+
+
+        <div id="absoluteAuto">
+            我是绝对定位我是绝对定位我是绝对定位我是绝对定位我是绝对定位我是绝对定位我是绝对定位我是绝对定位
+            我是绝对定位我是绝对定位我是绝对定位我是绝对定位我是绝对定位我是绝对定位
+        </div>
+
+    </div>
+
+</div>
+
+<div class="clear"></div>
+
+<div id="bottom">
+    底部
+</div>
+
+
+</body>
+</html>

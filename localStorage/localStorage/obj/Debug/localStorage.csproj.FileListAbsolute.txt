@@ -1,0 +1,6 @@
+E:\projects\localStorage\localStorage\bin\localStorage.dll.config
+E:\projects\localStorage\localStorage\bin\localStorage.dll
+E:\projects\localStorage\localStorage\bin\localStorage.pdb
+E:\projects\localStorage\localStorage\obj\Debug\localStorage.csprojResolveAssemblyReference.cache
+E:\projects\localStorage\localStorage\obj\Debug\localStorage.dll
+E:\projects\localStorage\localStorage\obj\Debug\localStorage.pdb

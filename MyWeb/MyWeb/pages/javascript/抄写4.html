@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+        //初始化 省份
+        function initProvience() {
+            //创建 一个数组
+            var provienceList = new Array();
+            //向数组中加入内容
+            provienceList.push("山东省");
+            provienceList.push("四川省");
+            provienceList[2] = "江苏省";
+
+            var newOption;
+            //循环加入数据
+            for (var i in provienceList) {
+                //创建一个下来选项
+                newOption = new Option(provienceList[i], provienceList[i]);
+                //将创建出来的省份加入到 省份下拉菜单中
+                document.myForm.selProvience.options.add(newOption);
+            }
+        }
+
+        //  document.myForm.selProvience  找到from中 name 为 selProvience 的元素
+        // onchange  下拉选中项发生改变的时候
+
+        //   var a=[1,2,3]
+        //  for(var i=0;i<3;i++){  console.log(a[i]);   }
+        // for(var i in a){  console.log(a[i]); }
+
+        //实例化 数组城市
+        var cityList = [];
+        cityList["山东省"] = ['济南', '青岛', '枣庄'];
+        cityList["四川省"] = ['成都', '绵阳', '内江'];
+        cityList["江苏省"] = ['南京', '苏州', '无锡'];
+
+        //改变 省份后城市处理
+        function changCity() {
+            // 获取到  选中的值
+            var pIndex = document.myForm.selProvience.value;
+            //清空城市下拉中的选项
+            document.myForm.selCity.length = 0;
+            //如果是 请选择 返回
+            if (pIndex == 0) {
+                return;
+            }
+
+            var newOption;
+            //循环 遍历 城市 添加到页面
+            for (var j in cityList[pIndex]) {
+                //新建一个城市下拉选项
+                newOption = new Option(cityList[pIndex][j], cityList[pIndex][j]);
+                //将新建的下拉选项 添加到城市下拉中
+                document.myForm.selCity.options.add(newOption);
+            }
+
+        }
+
+    </script>
+
+    <style type="text/css">
+        body, form {
+            margin: 0;
+            padding: 0;
+        }
+
+        #selInit {
+            margin: 50px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<form name="myForm" action="">
+
+    <div id="selInit">
+
+        <select>kongjian
+            <option>1</option>
+            <option>2</option>
+        </select>
+
+
+    </div>
+
+
+    <select name="selProvience" onchange="changCity() ">
+        <option value="0">----请选择开户行----</option>
+    </select>
+
+    <select name="selCity"></select>
+
+</form>
+
+
+<script type="text/javascript">
+    //调用初始化 省份
+    initProvience();
+</script>
+
+</body>
+</html>

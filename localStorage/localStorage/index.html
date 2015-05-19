@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        if (window.localStorage) {
+            console.log("1");
+        } else {
+            console.log("0");
+        }
+
+        
+        //三种设置和获取方法
+        localStorage.userName="zhognping"
+        "zhognping"
+        localStorage.userName
+        "zhognping"
+        localStorage
+        Storage {a: "3", userName: "zhognping", length: 2}
+        localStorage["age"]=17
+        17
+        localStorage["age"]
+        "17"
+        localStorage
+        Storage {a: "3", age: "17", userName: "zhognping", length: 3}
+        localStorage.setItem("pwd","user")
+        undefined
+        localStorage
+        Storage {a: "3", age: "17", pwd: "user", userName: "zhognping", length: 4}
+        localStorage.pwd
+        "user
+        localStorage.getItem("age")
+        "17"
+        localStorage.removeItem("age")
+        null
+        //设置 获取 删除 
+        setItem  getItem  removeItem
+
+
+        //无刷新改变url
+        window.history.pushState({},"title","www.baidu.com")1
+
+    </script>
+
+
+</body>
+</html>

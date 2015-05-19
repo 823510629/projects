@@ -1,0 +1,1 @@
+LT.User.isLogin&&(window.location.href=LT.Env.wwwRoot+"home/?r="+Math.random()),function(o){!o||LT.User.isLogin||-1==o.indexOf("hao123.com")&&-1==o.indexOf("hao222.com")||(location.href=LT.Env.wwwRoot+"event/landingpage/gain1.shtml?mscid=t_d_015")}(document.referrer);

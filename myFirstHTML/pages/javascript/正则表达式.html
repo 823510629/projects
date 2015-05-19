@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+      <script type="text/javascript">
+
+          //------------------------------------提取符合要求的字符串-------------------------------------------
+          var str="http://localhost/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.action?a=test";
+          var re=/http:\/\/localhost\/(\w+)(\.action)([^\n\r])*/g;
+          alert(str.replace(re,"$1"))
+
+
+          //---------------------------------替换字符串------------------------------------
+          var data = "123123,213,12312,312,3,Caat,cat,dsfsdfs,";
+          var reCat = /\bc([a-z]|[A-Z]|[0-9])*t\b/ig;  //•g（全文查找）；•i（忽略大小写）；•m（多行查找）
+          var res = data.replace(reCat,"AAA");
+          document.write(res);
+         // 123123,213,12312,312,3,AAA,AAA,dsfsdfs,
+
+
+
+          //------------------------------输入合法性验证------------------------------------
+          var reg1 = /^[0-9]*$/;
+          if ( reg1.test("345") ) {
+              alert("yes");
+          }
+          else {
+              alert("no");
+          }
+
+
+          var strEmail = "4567.DFDSF@fdsf.com";
+          var emailReg = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
+          if ( emailReg.test(strEmail) ) {
+              alert("邮箱格式正确");
+          }
+          else {
+              alert("邮箱格式错误");
+          }
+
+
+
+
+      </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

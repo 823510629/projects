@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+
+        function showContent(showId) {
+
+            var sourceId = event.srcElement.id;
+
+
+            var titleItems = document.getElementsByClassName("contentTitle");
+
+            for (var i = 0; i < titleItems.length; i++) {
+                var ele = titleItems[i];
+
+                if (ele.id != sourceId) {
+                    ele.style.borderBottom = "solid 1px red";
+                } else {
+                    ele.style.borderBottom = "none";
+                }
+            }
+
+            var contentItems = document.getElementsByClassName("content");
+            var count = contentItems.length;
+
+            for (var i = 0; i < count; i++) {
+                var ele = contentItems[i];
+
+                if (ele.id != showId) {
+                    ele.style.display = "none";
+                } else {
+                    ele.style.display = "block";
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+<div style="border:red 1px solid;width:610px;">
+
+    <div id="mvT" class="contentTitle"
+         style="float:left;border:solid 1px red;border-bottom:none;width:200px;height:30px;"
+         onclick="showContent('meiNv')">美女
+    </div>
+
+
+    <div id="sxT" class="contentTitle"
+         style="float:left;border:solid 1px red;border-bottom:none;width:200px;height:30px;"
+         onclick="showContent('shenXian')">神仙
+    </div>
+
+    <div id="msT" class="contentTitle" style="float:left;border:solid 1px red;width: 200px;height: 30px"
+         onclick="showContent('moShou')">魔兽
+    </div>
+
+    <div style="clear: both"></div>
+
+    <div id="meiNv" class="content"
+         style="border:solid 1px red; border-top:none;;width: 605px;height: 300px;display: none">
+        <br/> <br/> <br/>
+        美女 内容
+    </div>
+
+    <div id="shenXian" class="content"
+         style="border:solid 1px red; border-top:none;width: 605px;height: 300px; display: none">
+        <br/> <br/> <br/>
+        神仙 内容
+    </div>
+
+    <div id="moShou" class="content"
+         style="border:solid 1px red; border-top:none;;width: 605px;height: 300px; display: none">
+        <br/> <br/> <br/>
+        魔兽 内容
+
+    </div>
+</div>
+
+
+</body>
+</html>

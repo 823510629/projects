@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body, div {
+            margin: 0px;
+        }
+
+        div {
+            border: red solid 1px;
+        }
+
+        #zhu {
+            width: 100%;
+            height: 3200px;
+        }
+
+        #hao {
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            background-color: #444444;
+        }
+
+        #yingYon {
+            color: #fff;
+            margin-left: 500px;
+            margin-top: 15px;
+        }
+
+        #nan {
+            width: 100%;
+            height: 50px;
+        }
+
+        #anTo {
+            width: 960px;
+            height: 400px;
+            margin: auto;
+        }
+
+        #borDer {
+            height: 90px;
+            width: 100%;
+        }
+
+        #tuP {
+            width: 140px;
+            height: 45px;
+            margin-top: 15px;
+            float: left;
+        }
+
+        #daTu {
+            width: 300px;
+            height: 45px;
+            margin-top: 15px;
+            float: left;
+            margin-left: 515px;
+        }
+
+        #heng {
+            border: 2px #206F96 solid;
+        }
+
+        #dett {
+            width: 100%;
+            height: 100px;
+        }
+
+        .xinWen {
+            width: 157px;
+            height: 100px;
+            float: left;
+        }
+
+        .zuoYou {
+            width: 160px;
+            height: 184px;
+            float: left;
+        }
+
+        #zhong {
+            width: 632px;
+            height: 184px;
+            float: left
+        }
+
+        #top {
+            width: 960px;
+            margin: auto;
+            height: 2700px;
+            margin-top: 10px;
+        }
+
+        #floatRight {
+            width: 300px;
+            height: 2377px;
+            float: right;
+        }
+
+        #wangYi {
+            width: 300px;
+            height: 420px;
+        }
+
+        #tuPian {
+            width: 300px;
+            height: 251px;
+        }
+
+        #goYi {
+            width: 300px;
+            height: 101px;
+            font-weight: bold;
+        }
+
+        #xij {
+            width: 300px;
+            height: 250px;
+        }
+
+        .tianMao {
+            width: 300px;
+            height: 251px;
+        }
+
+        #yiYuan {
+            width: 300px;
+            height: 501px;
+        }
+
+        #guanZhu {
+            width: 300px;
+            height: 338px;
+        }
+
+        #solid {
+            width: 642px;
+            height: 1000px;
+        }
+
+        #er {
+            width: 311px;
+            height: 1000px;
+            float: right;
+        }
+
+        #san {
+            width: 311px;
+            height: 1000px;
+        }
+
+        #jue {
+            width: 310px;
+            height: 1000px;
+        }
+
+        #sidian {
+            width: 310px;
+            height: 36px;
+        }
+
+        #jin {
+            width: 310px;
+            height: 124px;
+        }
+
+        #guo {
+            width: 310px;
+            height: 178px;
+        }
+
+        #wang {
+            width: 310px;
+            height: 174px;
+        }
+
+        #xinWenyouTaidu {
+            width: 310px;
+            height: 234px;
+        }
+
+        #reDian {
+            width: 310px;
+            height: 233px;
+        }
+
+        #wenZi {
+            width: 640px;
+            height: 65px;
+        }
+
+        #zhongGuo {
+            width: 640px;
+            height: 100px;
+
+        }
+
+        #junShi {
+            width: 310px;
+            height: 221px;
+
+        }
+
+        #sp {
+            width: 310px;
+            height: 161px;
+
+        }
+
+        #if {
+            width: 310px;
+            height: 124px;
+
+        }
+
+        #luNu {
+            width: 310px;
+            height: 154px;
+
+        }
+
+        #Yi {
+            width: 310px;
+            height: 67px;
+
+        }
+
+        #kuAn {
+            width: 310px;
+            height: 245px;;
+        }
+
+        .zhu {
+            width: 140px;
+            height: 90px;
+
+            float: left;
+        }
+
+        .hao {
+            width: 140px;
+            height: 90px;
+
+            float: left;
+            margin-left: 15px;
+        }
+
+        .li {
+            width: 305px;
+            height: 90px;
+            float: left;
+            margin-top: 13px;
+        }
+
+        .borDer {
+            width: 640px;
+            height: 469px;
+
+        }
+
+        #width {
+            width: 640px;
+            height: 469px;
+        }
+
+        .height {
+            width: 310px;
+            height: 438px;
+            float: left;
+        }
+
+        .margin {
+            width: 310px;
+            height: 438px;
+            float: left;
+            margin-left: 15px;
+        }
+
+        #tiYu {
+            width: 310px;
+            height: 165px;
+        }
+
+        #qiShi {
+            width: 310px;
+            height: 247px;
+            margin-top: 20px;
+        }
+
+        #yuLe {
+            width: 310px;
+            height: 165px;
+        }
+
+        #fenG {
+            width: 310px;
+            height: 247px;
+            margin-top: 20px;
+        }
+
+        #shiJ {
+            width: 642px;
+            height: 96px;
+        }
+
+        #margin-left {
+            width: 640px;
+            height: 638px;
+        }
+
+        #caiJI {
+            width: 310px;
+            height: 638px;
+            float: left;
+        }
+
+        #guPian {
+            width: 310px;
+            height: 638px;
+            float: left;
+            margin-left: 13px;
+        }
+
+        #luanD {
+            width: 958px;
+            margin: auto;
+            height: 118px;
+        }
+
+        .xinWen a {
+            color: #252525;
+            text-decoration: none
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="zhu">
+    <div id="hao">
+        <div id="yingYon">应用 首页</div>
+    </div>
+    <div id="nan"></div>
+
+    <div id="anTo">
+
+        <div id="borDer">
+            <div id="tuP">
+                <center>
+                    <img src="../../images/wangyi.jpg" width="141" height="47">
+                </center>
+            </div>
+            <div id="daTu">
+                <center>
+                    <img src="../../images/qiche.jpg" width="300" height="40px;">
+                </center>
+            </div>
+        </div>
+        <hr id="heng">
+
+        <div id="dett">
+            <div class=" xinWen">
+
+                <a href="#" style="font-weight: bold">新闻</a>
+                <a href="#">军事 评论 图片</a>
+
+                <a href="#" style="font-weight: bold">体育</a>
+                <a href="#"> 购彩 NBA 英超</a>
+
+                <a href="#" style="font-weight: bold">娱乐</a>
+                <a href="#"> 电影 电视 音乐</a>
+
+            </div>
+            <div class=" xinWen">
+                <a href="#">新闻</a> <a href="#">军事</a> <a href="#">评论 </a><a href="#"> 图片</a>
+                <a href="#">体育</a> <a href="#"> 购彩</a><a href="#"> NBA </a> <a href="#"> 英超 </a>
+                <a href="#">娱乐</a><a href="#"> 电影 </a> <a href="#">电视 </a> <a href="#">音乐</a>
+            </div>
+            <div class=" xinWen">
+                <a href="#">新闻</a> <a href="#">军事</a> <a href="#">评论 </a><a href="#"> 图片</a>
+                <a href="#">体育</a> <a href="#"> 购彩</a><a href="#"> NBA </a> <a href="#"> 英超 </a>
+                <a href="#">娱乐</a><a href="#"> 电影 </a> <a href="#">电视 </a> <a href="#">音乐</a>
+            </div>
+            <div class=" xinWen">
+                <a href="#">新闻</a> <a href="#">军事</a> <a href="#">评论 </a><a href="#"> 图片</a>
+                <a href="#">体育</a> <a href="#"> 购彩</a><a href="#"> NBA </a> <a href="#"> 英超 </a>
+                <a href="#">娱乐</a><a href="#"> 电影 </a> <a href="#">电视 </a> <a href="#">音乐</a>
+            </div>
+            <div class=" xinWen">
+                <a href="#">新闻</a> <a href="#">军事</a> <a href="#">评论 </a><a href="#"> 图片</a>
+                <a href="#">体育</a> <a href="#"> 购彩</a><a href="#"> NBA </a> <a href="#"> 英超 </a>
+                <a href="#">娱乐</a><a href="#"> 电影 </a> <a href="#">电视 </a> <a href="#">音乐</a>
+            </div>
+            <div class=" xinWen">
+                <a href="#">新闻</a> <a href="#">军事</a> <a href="#">评论 </a><a href="#"> 图片</a>
+                <a href="#">体育</a> <a href="#"> 购彩</a><a href="#"> NBA </a> <a href="#"> 英超 </a>
+                <a href="#">娱乐</a><a href="#"> 电影 </a> <a href="#">电视 </a> <a href="#">音乐</a>
+            </div>
+        </div>
+        <div class="zuoYou">
+            <a href="#">超万人1元拿走</a> <a href="#">《态度公开课》开讲</a>
+            <a href="#">500明星汇集云音乐</a> <a href="#">23岁就被父母催婚</a>
+            <a href="#">超万人1元拿走</a> <a href="#">《态度公开课》开讲</a>
+            <a href="#">500明星汇集云音乐</a> <a href="#">23岁就被父母催婚</a>
+        </div>
+        <div id="zhong">
+            <div style="width:631px;height:20px;">
+                <a href="#">超万人1元拿走</a>
+                <a href="#">《态度公开课》开讲</a>
+                <a href="#">500明星汇集云音乐</a>
+                <a href="#">23岁就被父母催婚</a>
+            </div>
+            <center>
+                <img src="../../images/tup.jpg" width="631" height="130">
+            </center>
+            <div style="width:631px;height:20px;float: left;">
+                <a href="#">超万人1元拿走</a>
+                <a href="#">《态度公开课》开讲</a>
+                <a href="#">500明星汇集云音乐</a>
+                <a href="#">23岁就被父母催婚</a>
+            </div>
+        </div>
+        <div class="zuoYou">
+            <a href="#">超万人1元拿走</a> <a href="#">《态度公开课》开讲</a>
+            <a href="#">500明星汇集云音乐</a> <a href="#">23岁就被父母催婚</a>
+            <a href="#">超万人1元拿走</a><a href="#">《态度公开课》开讲</a>
+            <a href="#">500明星汇集云音乐</a> <a href="#">23岁就被父母催婚</a>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+
+    <div id="top">
+        <div id="floatRight">
+            <div id="wangYi">
+                免费邮 VIP邮箱 企业邮箱 邮箱大师 易信
+                游戏梦幻西游2 新大话2新大话3镇魔曲 魔兽世界 星际争霸Ⅱ 倩女幽魂2
+                武魂2 天下3 突击英雄新飞飞 大唐无双零 天谕 英雄三国 龙剑 乱斗西游炉石传说 UU加速
+                社区考拉海购LOFTER 博客 相册 花田交友 约会 美聊 跟贴 秀品 CC语音 BoBo直播 推荐彩票 理财
+                商城 贵金属 电影票 车险 有道词典 翻译 云笔记 印像派 公开课 云课堂
+                读小说 云音乐 火车票 公正邮 1元夺宝 应用 杂志 新闻客户端 大学MOOC
+                商城 贵金属 电影票 车险 有道词典 翻译 云笔记 印像派 公开课 云课堂
+                读小说 云音乐 火车票 公正邮 1元夺宝 应用 杂志 新闻客户端 大学MOOC
+                商城 贵金属 电影票 车险 有道词典 翻译 云笔记 印像派 公开课 云课堂
+                读小说 云音乐 火车票 公正邮 1元夺宝 应用 杂志 新闻客户端 大学MOOC
+                商城 贵金属 电影票 车险 有道词典 翻译 云笔记 印像派 公开课 云课堂
+                读小说 云音乐 火车票 公正邮 1元夺宝 应用 杂志 新闻客户端 大学MOOC
+            </div>
+            <div id="tuPian">
+                <center>
+                    <img src="../../images/男哥.jpg" width="300">
+                </center>
+            </div>
+            <div id="goYi">
+                公益·传媒网易新闻 世界在你手中
+                [公益] 国际不再恐同日 解读爱的少数派
+                [传媒] 翟墨驾驶"东南卫视号"抵达新加坡
+            </div>
+            <div id="xij">
+                <center>
+                    <img src="../../images/浩哥.jpg" width="300">
+                </center>
+            </div>
+            <div class="tianMao">
+                <center>
+                    <img src="../../images/男哥.jpg" width="300">
+                </center>
+            </div>
+            <div id="yiYuan">
+                习近平:政法队伍绝不能当骑墙派 中国方略
+                中国210所野鸡大学名单曝光:北京为高发地
+                中方否认中泰拟建运河绕马六甲海峡 泰方回应
+                陕西首富吴一坚被协助调查 被指涉反腐行动
+                陕钢百亿项目被指污染 遭环保部否决继续生产
+                体总女高官被神秘男带走后失联 或已落马
+                贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                贵州女教师怀孕5个月持准生证仍被责令引产
+                上海女科学家用"砒霜疗法"治愈一种白血病
+                广东两村庄间存百年毒誓禁通婚 男女难言爱
+                男子同时交往17个女友 涉嫌诈骗已被刑拘(图)
+                金正恩批甲鱼场未养出大虾 "大怒"照曝光
+                女子因男友赖床泼热油开水 致其全身30%烫伤
+                陕西查获"丧尸药"128公斤 配方来自化学教授
+                刘翔妻子回应"裤裆藏手榴弹"剧情 该剧被停播
+                大S称汪小菲精子值三千万 和尚酒驾被罚千元
+                原来我们被电影森森地欺骗了这么多年(图)
+                获誉宅男女神的“猪肉妹”曝光素颜后...(图)
+                新闻有态度数读 | 中国被迫创业者比例高
+                另一面 | 争取铁路过境，英国民众从不烦恼
+                财经 | 沪指涨3.13%重回4400点 券商板块爆发
+                浏阳河停产背后现债务危机 王健林成功的秘密
+                科技 | 没了刷屏假货传销 微商该是什么样子
+                娱乐 | "老师"何炅 在大学教书的娱乐主持人
+                体育 | 赢球靠碰瓷?错!揭哈登被遗忘的另一面
+                女人 | 倪妮冯绍峰 有一种分手叫秀恩爱 图集
+                君子 | 日本工薪族 不为人知的另一面生活
+            </div>
+            <div class="tianMao">
+                <center>
+                    <img src="../../images/男哥.jpg" width="300" height="251">
+                </center>
+            </div>
+            <div id="guanZhu">
+                <center>
+                    <img src="../../images/杨.jpg" width="300" height="336">
+                </center>
+
+            </div>
+        </div>
+        <div id="solid">
+            <div id="er">
+                <div id="jue">
+                    <span id="sidian">
+                        <input type="button" value="军事"/>
+                        <input type="button" value="图片"/>
+                    </span>
+
+                    <div id="jin">
+                        习近平:政法队伍绝不能当骑墙派 中国方略
+                        中国210所野鸡大学名单曝光:北京为高发地
+                        中方否认中泰拟建运河绕马六甲海峡 泰方回应
+                        陕西首富吴一坚被协助调查 被指涉反腐行动
+                        陕钢百亿项目被指污染 遭环保部否决继续生产
+                    </div>
+                    <div id="guo">
+                        体总女高官被神秘男带走后失联 或已落马
+                        贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                        东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                        贵州女教师怀孕5个月持准生证仍被责令引产
+                        上海女科学家用"砒霜疗法"治愈一种白血病
+                        广东两村庄间存百年毒誓禁通婚 男女难言爱
+                        男子同时交往17个女友 涉嫌诈骗已被刑拘(图)
+                    </div>
+                    <div id="wang">体总女高官被神秘男带走后失联 或已落马
+                        贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                        东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                        贵州女教师怀孕5个月持准生证仍被责令引产
+                        上海女科学家用"砒霜疗法"治愈一种白血病
+                        广东两村庄间存百年毒誓禁通婚 男女难言爱
+                        男子同时交往17个女友 涉嫌诈骗已被刑拘(图)
+                    </div>
+                    <div id="xinWenyouTaidu">
+                        体总女高官被神秘男带走后失联 或已落马
+                        贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                        东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                        贵州女教师怀孕5个月持准生证仍被责令引产
+                        上海女科学家用"砒霜疗法"治愈一种白血病
+                        广东两村庄间存百年毒誓禁通婚 男女难言爱
+                        男子同时交往17个女友 涉嫌诈骗已被刑拘(图)
+                    </div>
+                    <div id="reDian">
+                        体总女高官被神秘男带走后失联 或已落马
+                        贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                        东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                        贵州女教师怀孕5个月持准生证仍被责令引产
+                        上海女科学家用"砒霜疗法"治愈一种白血病
+                        广东两村庄间存百年毒誓禁通婚 男女难言爱
+                        男子同时交往17个女友 涉嫌诈骗已被刑拘(图)
+                    </div>
+                </div>
+            </div>
+            <div id="san">
+                <div id="junShi">
+                    <center>
+                        <img src="../../images/男哥.jpg" width="310" height="220">
+                    </center>
+                </div>
+                <div id="sp">
+                    <center>
+                        <img src="../../images/男哥.jpg" width="310" height="160">
+                    </center>
+                </div>
+                <div id="if">
+                    <center>
+                        <img src="../../images/tup.jpg" width="310" height="127">
+                    </center>
+                </div>
+                <div id="luNu">
+                    体总女高官被神秘男带走后失联 或已落马
+                    贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                    东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                    贵州女教师怀孕5个月持准生证仍被责令引产
+                    上海女科学家用"砒霜疗法"治愈一种白血病
+                    广东两村庄间存百年毒誓禁通婚 男女难言爱
+                    男子同时交往17个女友 涉嫌诈骗已被刑拘(图)
+                </div>
+                <div id="Yi">
+                    体总女高官被神秘男带走后失联 或已落马
+                    贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                    东南亚多国拒收偷渡船
+
+                </div>
+                <div id="kuAn">
+                    <div class="zhu">
+                        <center>
+                            <img src="../../images/tup.jpg" width="142" height="96">
+                        </center>
+                    </div>
+                    <div class="hao">
+                        <center>
+                            <img src="../../images/tup.jpg" width="142" height="96">
+                        </center>
+                    </div>
+                    <div class="li">
+                        <center>
+                            <img src="../../images/tup.jpg" width="308" height="90">
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div id="wenZi">
+                体总女高官被神秘男带走后失联 或已落马
+                贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                贵州女教师怀孕5个月持准生证仍被责令引产
+                上海女科学家用"砒霜疗法"治愈一种白血病
+                广东两村庄间存百年毒誓禁通婚
+            </div>
+            <div id="zhongGuo">
+                <center>
+                    <img src="../../images/changtu.jpg" width="642" height="98">
+                </center>
+            </div>
+            <div id="width">
+                <div class="height">
+                    <div id="tiYu">
+                        体总女高官被神秘男带走后失联 或已落马
+                        贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                        东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                        贵州女教师怀孕5个月持准生证仍被责令引产
+                        上海女科学家用"砒霜疗法"治愈一种白血病
+                        广东两村庄间存百年毒誓禁通婚 男女难言爱
+                        男子同时交往17个女友 涉嫌诈骗已被刑拘(图)
+                    </div>
+                    <div id="qiShi">
+                        体总女高官被神秘男带走后失联 或已落马
+                        贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                        东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                        贵州女教师怀孕5个月持准生证仍被责令引产
+                        上海女科学家用"砒霜疗法"治愈一种白血病
+                        广东两村庄间存百年毒誓禁通婚 男女难言爱
+                        男子同时交往17个女友 涉嫌诈骗已被刑拘(图)
+                    </div>
+                </div>
+                <div class="margin">
+                    <div id="yuLe">
+                        <center>
+                            <img src="../../images/林依晨.jpg" width="310" height="165">
+                        </center>
+                    </div>
+                    <div id="fenG">
+                        体总女高官被神秘男带走后失联 或已落马
+                        贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                        东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                        贵州女教师怀孕5个月持准生证仍被责令引产
+                        上海女科学家用"砒霜疗法"治愈一种白血病
+                        广东两村庄间存百年毒誓禁通婚 男女难言爱
+                        男子同时交往17个女友 涉嫌诈骗已被刑拘(图)
+                    </div>
+                </div>
+            </div>
+            <div id="shiJ">
+                <center>
+                    <img src="../../images/changtu.jpg" width="642" height="96">
+                </center>
+
+            </div>
+            <div id="margin-left">
+                <div id="caiJI">
+                    习近平:政法队伍绝不能当骑墙派 中国方略
+                    中国210所野鸡大学名单曝光:北京为高发地
+                    中方否认中泰拟建运河绕马六甲海峡 泰方回应
+                    陕西首富吴一坚被协助调查 被指涉反腐行动
+                    陕钢百亿项目被指污染 遭环保部否决继续生产
+                    体总女高官被神秘男带走后失联 或已落马
+                    贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                    东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                    贵州女教师怀孕5个月持准生证仍被责令引产
+                    上海女科学家用"砒霜疗法"治愈一种白血病
+                    广东两村庄间存百年毒誓禁通婚 男女难言爱
+                    男子同时交往17个女友 涉嫌诈骗已被刑拘(图)
+                    金正恩批甲鱼场未养出大虾 "大怒"照曝光
+                    女子因男友赖床泼热油开水 致其全身30%烫伤
+                    陕西查获"丧尸药"128公斤 配方来自化学教授
+                    刘翔妻子回应"裤裆藏手榴弹"剧情 该剧被停播
+                    大S称汪小菲精子值三千万 和尚酒驾被罚千元
+                    原来我们被电影森森地欺骗了这么多年(图)
+                    获誉宅男女神的“猪肉妹”曝光素颜后...(图)
+                    新闻有态度数读 | 中国被迫创业者比例高
+                    另一面 | 争取铁路过境，英国民众从不烦恼
+                    财经 | 沪指涨3.13%重回4400点 券商板块爆发
+                    浏阳河停产背后现债务危机 王健林成功的秘密
+                    科技 | 没了刷屏假货传销 微商该是什么样子
+                    娱乐 | "老师"何炅 在大学教书的娱乐主持人
+                    体育 | 赢球靠碰瓷?错!揭哈登被遗忘的另一面
+                    女人 | 倪妮冯绍峰 有一种分手叫秀恩爱 图集
+                    君子 | 日本工薪族 不为人知的另一面生活
+                </div>
+                <div id="guPian">
+                    习近平:政法队伍绝不能当骑墙派 中国方略
+                    中国210所野鸡大学名单曝光:北京为高发地
+                    中方否认中泰拟建运河绕马六甲海峡 泰方回应
+                    陕西首富吴一坚被协助调查 被指涉反腐行动
+                    陕钢百亿项目被指污染 遭环保部否决继续生产
+                    体总女高官被神秘男带走后失联 或已落马
+                    贪官收钱后怎样"买买买":索贿给歌手妻子出CD
+                    东南亚多国拒收偷渡船 近百难民自相残杀身亡
+                    贵州女教师怀孕5个月持准生证仍被责令引产
+                    上海女科学家用"砒霜疗法"治愈一种白血病
+                    广东两村庄间存百年毒誓禁通婚 男女难言爱
+                    男子同时交往17个女友 涉嫌诈骗已被刑拘(图)
+                    金正恩批甲鱼场未养出大虾 "大怒"照曝光
+                    女子因男友赖床泼热油开水 致其全身30%烫伤
+                    陕西查获"丧尸药"128公斤 配方来自化学教授
+                    刘翔妻子回应"裤裆藏手榴弹"剧情 该剧被停播
+                    大S称汪小菲精子值三千万 和尚酒驾被罚千元
+                    原来我们被电影森森地欺骗了这么多年(图)
+                    获誉宅男女神的“猪肉妹”曝光素颜后...(图)
+                    新闻有态度数读 | 中国被迫创业者比例高
+                    另一面 | 争取铁路过境，英国民众从不烦恼
+                    财经 | 沪指涨3.13%重回4400点 券商板块爆发
+                    浏阳河停产背后现债务危机 王健林成功的秘密
+                    科技 | 没了刷屏假货传销 微商该是什么样子
+                    娱乐 | "老师"何炅 在大学教书的娱乐主持人
+                    体育 | 赢球靠碰瓷?错!揭哈登被遗忘的另一面
+                    女人 | 倪妮冯绍峰 有一种分手叫秀恩爱 图集
+                    君子 | 日本工薪族 不为人知的另一面生活
+                </div>
+            </div>
+            <div id="luanD">
+                <center>
+                    <img src="../../images/manhua.jpg" width="960" height="118">
+                </center>
+
+            </div>
+            <hr width="958px;">
+            <div style="width:958px;height:116px;">
+                <div style="width:200px;height:111px;float: left;margin-left: 13px;">
+                    <a href="#">ICP证粤B2-20090191</a>
+                    <a href="#"> 增值电信业务经营许可证B2-20090058</a>
+                    <a href="#"> 互联网出版许可证粤002号</a>
+                    <a href="#"> 互联网新闻信息服务许可证</a>
+                    <a href="#"> 广东省通信管理局</a>
+                </div>
+                <div style="width:200px;height:111px;float: left;margin-left: 13px;">
+                    <a href="#">ICP证粤B2-20090191</a>
+                    <a href="#"> 增值电信业务经营许可证B2-20090058</a>
+                    <a href="#"> 互联网出版许可证粤002号</a>
+                    <a href="#"> 互联网新闻信息服务许可证</a>
+                    <a href="#"> 广东省通信管理局</a>
+                </div>
+                <div style="width:200px;height:111px;float: left;margin-left: 13px;">
+                    <a href="#">ICP证粤B2-20090191</a>
+                    <a href="#"> 增值电信业务经营许可证B2-20090058</a>
+                    <a href="#"> 互联网出版许可证粤002号</a>
+                    <a href="#"> 互联网新闻信息服务许可证</a>
+                    <a href="#"> 广东省通信管理局</a>
+                </div>
+                <div style="width:200px;height:111px;float: left;margin-left: 13px;">
+                    <a href="#">ICP证粤B2-20090191</a>
+                    <a href="#"> 增值电信业务经营许可证B2-20090058</a>
+                    <a href="#"> 互联网出版许可证粤002号</a>
+                    <a href="#"> 互联网新闻信息服务许可证</a>
+                    <a href="#"> 广东省通信管理局</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

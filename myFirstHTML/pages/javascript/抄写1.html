@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+
+        function showContent(showId) {
+
+            var sourceId = event.srcElement.id;//获取触发事件标签id
+
+
+            //获取到所有标题层
+            var titleItems = document.getElementsByClassName("contentTitle");
+
+            // 循环所有标题层
+            for (var i = 0; i < titleItems.length; i++) {
+                var ele = titleItems[i];
+
+
+                //判断当前循环的元素是否跟点击元素id相同
+                if (ele.id != sourceId) {
+                    ele.style.borderBottom = "solid 1px red";
+                } else {
+                    ele.style.borderBottom = "none";
+                }
+            }
+
+            var contentItems = document.getElementsByClassName("content");
+            var count = contentItems.length;
+
+            for (var i = 0; i < count; i++) {
+                var ele = contentItems[i];
+
+                if (ele.id != showId) {
+                    ele.style.display = "none";
+                } else {
+                    ele.style.display = "block";
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+<div style="border:red 1px solid;width:610px;">
+
+    <div id="mvT" class="contentTitle"
+         style="float:left;border:red 1px solid;border-bottom:none;width:200px;height:30px;"
+         onclick="showContent('meiNv')">美女
+    </div>
+    <div id="sxT" class="contentTitle"
+         style="float:left;border:red 1px solid;border-bottom:none;width:200px;height:30px;"
+         onclick="showContent('shenXian')">神仙
+    </div>
+    <div id="msT" class="contentTitle"
+         style="float:left;border:red 1px solid;border-bottom:none;width:200px;height:30px;"
+         onclick="showContent('moShou')">魔兽
+    </div>
+
+    <div style="clear: both"></div>
+
+    <div id="meiNv" class="content" style="border:red 1px solid;border-top:none;width:605px;height:300px;">
+        <br/><br/><br/>
+        美女内容
+    </div>
+    <div id="shenXian" class="content" style="border:red 1px solid;border-top:none;width:605px;height:300px;display: none">
+        <br/><br/><br/>
+        神仙内容
+    </div>
+    <div id="moShou" class="content" style="border:red 1px solid;border-top:none;width:605px;height:300px;display: none">
+        <br/><br/><br/>
+        魔兽内容
+    </div>
+
+</div>
+
+</body>
+</html>

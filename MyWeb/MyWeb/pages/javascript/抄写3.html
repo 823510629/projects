@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        function formValidate() {
+
+            var nameVal = document.getElementById("txtName").value;
+            if (nameVal == "") {
+                alert("用户名不可以为空！");
+                document.getElementById("txtName").focus();
+                return false;
+            }
+
+            var pwdVal = document.getElementById("txtPwd").value;
+            if (pwdVal == "") {
+                alert("密码不可以为空！");
+                return false;
+            }
+            if (pwdVal.length < 6) {
+                alert("密码安全性不够：密码长度必须不小于6位！");
+                return false;
+            }
+
+            var emailVal = document.getElementById("txtEmail").value;
+            if (emailVal == "") {
+                alert("电子邮件不可以为空！");
+                return false;
+            }
+            if (emailVal.indexOf("@") == -1) {
+                alert("电子邮件格式不正确：必须包含@符号！！");
+                document.getElementById("txtEmail").select();
+                return false;
+            }
+            if (emailVal.indexOf(".") == -1) {
+                alert("电子邮件格式不正确：必须包含.符号！！");
+                document.getElementById("txtEmail").style.color = "red";
+                document.getElementById("txtEmail").focus();
+                return false;
+            } else {
+                document.getElementById("txtEmail").style.color = "";
+            }
+
+            var phoneVal = document.getElementById("txtPhone").value;
+            if (phoneVal == "") {
+                alert("手机号码不可以为空！");
+                return false;
+            }
+            if (phoneVal.length != 11) {
+                alert("手机号码长度必须等于11位！");
+                return false;
+            }
+
+            return true;
+
+        }
+
+
+        function startSubmit() {
+
+
+            var isOk = formValidate();
+
+            if (isOk) {
+                document.myForm.submit();
+            }
+
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+
+
+<form name="myForm" action="ok.html" method="get" onsubmit="return formValidate()">
+    <table width="500px" style="margin:auto;margin-top:400px" border="1">
+        <tr align="center">
+            <td colspan="2">注册</td>
+        </tr>
+        <tr>
+            <td>用户名</td>
+            <td><input type="text" id="txtName"/></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input type="password" id="txtPwd"/></td>
+        </tr>
+        <tr>
+            <td>电子邮件</td>
+            <td><input type="text" id="txtEmail"/></td>
+        </tr>
+        <tr>
+            <td>手机号码</td>
+            <td><input type="text" id="txtPhone"/></td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">
+                <!--<input type="button" id="btnSubmit" onclick="formValidate()" value="提交"/>-->
+                <input type="submit" id="btnSubmit" value="提交"/>
+                <input type="image" src="../../images/submit.png"/>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<br/><br/><br/>
+
+<center>
+    <button onclick="startSubmit()">手动控制表单提交</button>
+</center>
+</body>
+</html>

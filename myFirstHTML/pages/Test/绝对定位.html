@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div, span, li, a {
+            border: solid 1px red;
+        }
+    </style>
+</head>
+<body>
+<div style=" height: 3000px;width:4000px">
+
+        <div style="width:200px;height:200px; float: left"> float:浮动</div>
+        <div style="width:200px;height:200px; float: left"> float:浮动</div>
+        <div style="width:200px;height:200px; float: left"> float:浮动</div>
+        <div style="width:200px;height:200px; float: left"> float:浮动</div>
+        <div style="width:200px;height:200px; float: left"> float:浮动</div>
+        <div style="clear:both"></div><!--在块级标签上添加清除漂浮属性-->
+        <div style="background: blue">
+
+            <select id="selectItem">
+                <option value="val1">选项1</option>
+                <option value="val2">选项2</option>
+                <option value="val3">选项3</option>
+            </select>
+
+        </div>
+
+
+    <div style="width:200px;height:200px; float: right"> float:浮动</div>
+    <div style="width:200px;height:200px; float: right"> float:浮动</div>
+    <div style="width:200px;height:200px; float: right"> float:浮动</div>
+    <div style="width:200px;height:200px; float: right"> float:浮动</div>
+    <div style="clear:both"></div><!--在块级标签上添加清除漂浮属性-->
+    <div style="background: blue">aaaaaaaaaaaaa</div>
+
+
+    <div style="width:300px;height:200px; position: absolute; top:400px;left:400px">
+        绝对定位，相对于浏览器文档定位
+    </div>
+
+
+    <div style="width:300px;height:200px;top:600px; position: absolute;right:100px">
+        222
+        <div style="width: 200px;height:100px; position: relative; top:-30px; left:10px">
+            相对定位,默认以参照物左上角位置定位，，必须有个定位参照元素标签（块级标签、具有定位属性的标签）
+        </div>
+    </div>
+
+    <div style="width:300px;height:200px;position:fixed; top:50px; right:10px">
+        固定定位,相对于浏览器定位
+    </div>
+
+</div>
+
+
+</body>
+</html>

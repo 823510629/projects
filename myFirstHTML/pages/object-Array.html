@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        //-------------------------------------Object----------------------------------------------
+        //Object.prototype.call = function(){
+       //     alert("通了！！")
+      //  }
+
+        var obj = new Object(1);   // ===>var  obj = 1;
+        var obj1= new Object("aaaaaaaaaa");   // ===>var obj1 = "aaaaaaaaaa";
+        var obj2 = new Object(true);   // ===> var obj2 = true;
+        var obj3 = new Object([1,2,3]);   // ===> var obj3 = [1,2,3];
+
+        //--------------------------------------String--------------------------------------------------
+        var str = new String("ABCDEFG"); // str = ""ABCDEFG"";
+        //str.length;
+
+        //--------------------------------------Event-------------------------------------------------
+        function eventFun(){
+
+            alert(event);
+
+        }
+
+
+        document.onmousedown = function(){
+
+            if(event.button==2){
+                alert("禁止鼠标右击事件");
+            }
+        }
+
+        document.onmousemove = function(){
+            document.getElementById("msg").innerText = "x坐标："+event.clientX +  "   y坐标："+event.clientY ;
+        }
+
+        //-----------------------------------对象访问语句   for....in..-------------------------------------------
+        var user = {name:"小华",age:20,sex:"man",height:'170cm',weight:"170G",hobby:["吃","喝","玩"]};
+        // 获取属性的值 方法一：user.name;    方法二：user["name"]
+        // 对象添加新属性,如果有改属性，就更新值，如果没有，就添加新属性并且赋值  方法一：user.abc="ABCDE";   方法二：user["abc"]="ABCDE";
+
+        //循环遍历user对象的每个属性  ==》name,age,sex,height,weight,bobby
+        for(var attr in user){
+            var msg = attr+"="+user[attr]+"<br/>";
+            document.write(msg);
+        }
+
+        //访问对象的属性值
+        with(user){
+           // alert(name);
+            //alert(age);
+           // alert(sex);
+        }
+
+    //---------------------------------------Array---------------------------------------------------------------------------
+        Array.prototype.insert = function (index, item) {
+            this.splice(index, 0, item);
+            return this;
+        };
+
+
+    //var array = new Array();//声明一个空数组对象
+    //var array = [];
+     // var array = new Array(4);//声明一个长度为4的数组
+     var  array = [2,6,3,8];
+
+    //循环数组内容
+    for(var i=0;i<array.length;i++){
+        //alert(array[i]);
+    }
+
+        array.sort();//默认升序排序
+
+        //降序排序
+        array.sort(function(a,b){return a<b;})
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+
+<div id="msg"></div>
+
+<button id="myButton" onclick="eventFun()">event对象</button>
+
+</body>
+</html>

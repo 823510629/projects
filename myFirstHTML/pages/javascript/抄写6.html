@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+        function initProvience(){
+
+            provienceList.push("")
+
+
+
+
+        }
+
+
+
+
+
+    //初始化 省份
+    function initProvience() {
+    //创建一个数组
+    var provienceList = new Array()
+    //向数组中加入内容
+    provienceList.push("山东省");
+    provienceList.push("四川省");
+    provienceList.push("江苏省");
+
+    var newOption;
+    //循环加入数据
+    for (var i in provienceList) {
+    //创建一个下选项
+    newOption = new Option(provienceList[i], provienceList[i]);
+    //将创建出来的省份加入到 省份下拉菜单中
+    document.myForm.selProvience.options.add(newOption);
+    }
+
+    }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

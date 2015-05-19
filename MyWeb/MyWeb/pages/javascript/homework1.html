@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../javascript/jquery-1.11.2.js"></script>
+    <script src="../../javascript/comm.js"></script>
+    <script>
+
+        var paraList = getAllPara();
+        
+
+        var list = [
+            { name: "A", age: 18 },
+            { name: "b", age: 20 },
+            { name: "c", age: 21 },
+            { name: "e", age: 22 },
+            { name: "e", age: 20 }
+        ];
+
+        //数组长度
+        var a = list.length;
+
+        //筛选出姓名都为e的人员
+        //方法一
+        var newData = list.filter(function (item) {
+            return item.name == "e";
+        });
+
+        //方法二
+        var newData1 = [];
+        for (var i = 0; i < list.length; i++) {
+            var item = list[i];
+            if (item.name == "e") {
+                newData1.push(item);
+            }
+        }
+
+        //方法三
+        var newData2 = $.grep(list, function (item, index) {
+
+            return item.name == "e";
+
+        });
+
+        //在第二个索引位置插入一个新的人员对象
+        // var user = {name:"AA",age:29};
+        //list.insert(1,user);
+
+        //删除第3个索引的人员对象
+        list.remove(2);
+
+        //----------------------------------------------------------------------------------------------------------
+
+        //新问题？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
+        var list001 = ["a", "b", "a", "b", "c"];
+        //找出a的个数
+        //去掉重复项
+
+        //在第二个索引位置插入一个新的人员对象
+
+        //http://localhost:63342/myFirstHTML/pages/Test/163.html?id=2&name=bingqing&aaa=123&c=yyyyy&d=6666&.......
+
+     
+
+      
+
+    </script>
+
+
+
+</head>
+<body>
+    <div>
+
+        <input id="Button1" type="button" value="button" />
+
+        <select id="Select1">
+            <option>ddddd</option>
+            <option>aaaaa</option>
+        </select>
+    </div>
+</body>
+</html>

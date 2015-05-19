@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BAE22FB4-BF96-48B1-B29C-6293073BB8B9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyWeb</RootNamespace>
+    <AssemblyName>MyWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\startCss.css" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\bd_logo1.png" />
+    <Content Include="images\haosou.png" />
+    <Content Include="images\lie.png" />
+    <Content Include="images\liepin_Header.jpg" />
+    <Content Include="images\submit.png" />
+    <Content Include="images\tp_files\1.jpg" />
+    <Content Include="images\tp_files\54d1e9bf712e7147fd812bed01a.png" />
+    <Content Include="images\tp_files\54d1e9c0712eb4f6b84cf00502c.png" />
+    <Content Include="images\tp_files\54d1e9c4712eb4f6b84cf61502c.png" />
+    <Content Include="images\tp_files\54d1e9c5712eb4f6b84cf9f802c.png" />
+    <Content Include="images\tp_files\54d1e9c9712e7147fd8141da02c.png" />
+    <Content Include="images\tp_files\54d1e9cd712eb4f6b84d0d5402c.png" />
+    <Content Include="images\tp_files\54d1e9cf712eb4f6b84d0feb01a.png" />
+    <Content Include="images\tp_files\54d1e9d9712eb4f6b84d1d7102c.png" />
+    <Content Include="images\tp_files\54d1e9e5712e7147fd81600701a.png" />
+    <Content Include="images\tp_files\54d1e9e8712e7147fd81609a02c.png" />
+    <Content Include="images\tp_files\cdntest.js" />
+    <Content Include="images\tp_files\common_6e2f763e.css" />
+    <Content Include="images\tp_files\default_f7b28aa3.css" />
+    <Content Include="images\tp_files\footer_47d2c33b.css" />
+    <Content Include="images\tp_files\header_c8045ce8.css" />
+    <Content Include="images\tp_files\header_ec650e3f.js" />
+    <Content Include="images\tp_files\hm.js" />
+    <Content Include="images\tp_files\home_ec7de70e.js" />
+    <Content Include="images\tp_files\jquery-1.7.1.min_c7e0488b.js" />
+    <Content Include="images\tp_files\jquery.artDialog_222fb849.js" />
+    <Content Include="images\tp_files\jquery.checkboxui_eca5a286.js" />
+    <Content Include="images\tp_files\jquery.loadingui_6a6316c4.js" />
+    <Content Include="images\tp_files\jquery.placeholderui_4ea8db00.js" />
+    <Content Include="images\tp_files\jquery.tipsui_03bbd011.js" />
+    <Content Include="images\tp_files\jquery.validTip_3908ed67.js" />
+    <Content Include="images\tp_files\jquery.valid_cbce39ff.js" />
+    <Content Include="images\tp_files\logo_a2145e0d.png" />
+    <Content Include="images\tp_files\lt.apps_b2dd98fb.js" />
+    <Content Include="images\tp_files\lt.core_12125e4e.js" />
+    <Content Include="images\tp_files\micro-code_88e70077.png" />
+    <Content Include="images\tp_files\page.index.listener_cfefa656.js" />
+    <Content Include="images\tp_files\public_3bba3b43.css" />
+    <Content Include="images\tp_files\quick_menu_3bf9fc99.js" />
+    <Content Include="images\tp_files\rt.js" />
+    <Content Include="images\tp_files\slide.guider_ed6f5431.js" />
+    <Content Include="images\tp_files\stat_f37a07ef.js" />
+    <Content Include="images\tp_files\v.js" />
+    <Content Include="images\杨紫.jpg" />
+    <Content Include="JavaScript\comm.js" />
+    <Content Include="JavaScript\jquery-1.11.2.js" />
+    <Content Include="JavaScript\jquery-1.11.2.min.js" />
+    <Content Include="pages\css\background-image.html" />
+    <Content Include="pages\css\background-positon.html" />
+    <Content Include="pages\css\background-repeat.html" />
+    <Content Include="pages\css\background.html" />
+    <Content Include="pages\css\border.html" />
+    <Content Include="pages\css\color.html" />
+    <Content Include="pages\css\cursor.html" />
+    <Content Include="pages\css\font-family.html" />
+    <Content Include="pages\css\font-size.html" />
+    <Content Include="pages\css\font-weight.html" />
+    <Content Include="pages\css\height.html" />
+    <Content Include="pages\css\images\1.jpg" />
+    <Content Include="pages\css\margin.html" />
+    <Content Include="pages\css\text-align.html" />
+    <Content Include="pages\css\text-decoration.html" />
+    <Content Include="pages\css\width.html" />
+    <Content Include="pages\javascript\ABC.html" />
+    <Content Include="pages\javascript\homework1.html" />
+    <Content Include="pages\javascript\if.html" />
+    <Content Include="pages\javascript\js.html" />
+    <Content Include="pages\javascript\json的格式.html" />
+    <Content Include="pages\javascript\js练习.html" />
+    <Content Include="pages\javascript\js练习2.html" />
+    <Content Include="pages\javascript\ok.html" />
+    <Content Include="pages\javascript\两列.html" />
+    <Content Include="pages\javascript\两列布局.html" />
+    <Content Include="pages\javascript\函数.html" />
+    <Content Include="pages\javascript\开始jquery.html" />
+    <Content Include="pages\javascript\抄写1.html" />
+    <Content Include="pages\javascript\抄写2.html" />
+    <Content Include="pages\javascript\抄写3.html" />
+    <Content Include="pages\javascript\抄写4.html" />
+    <Content Include="pages\javascript\抄写5.html" />
+    <Content Include="pages\javascript\抄写6.html" />
+    <Content Include="pages\javascript\抄写7.html" />
+    <Content Include="pages\javascript\抄写8.html" />
+    <Content Include="pages\javascript\抄写9.html" />
+    <Content Include="pages\javascript\文档处理.html" />
+    <Content Include="pages\javascript\正则表达式.html" />
+    <Content Include="pages\javascript\第一章.html" />
+    <Content Include="pages\javascript\第七章.html" />
+    <Content Include="pages\javascript\第三章.html" />
+    <Content Include="pages\javascript\第二章.html" />
+    <Content Include="pages\javascript\第五章.html" />
+    <Content Include="pages\javascript\练习3.html" />
+    <Content Include="pages\javascript\练习4.html" />
+    <Content Include="pages\javascript\练习5.html" />
+    <Content Include="pages\javascript\菜谱.html" />
+    <Content Include="pages\padding.html" />
+    <Content Include="pages\Test\163.html" />
+    <Content Include="pages\Test\abc.html" />
+    <Content Include="pages\Test\baidu.html" />
+    <Content Include="pages\Test\liepie.html" />
+    <Content Include="pages\Test\myFirst.html" />
+    <Content Include="pages\Test\testDiv.html" />
+    <Content Include="pages\Test\yangs.html" />
+    <Content Include="pages\Test\好搜.html" />
+    <Content Include="pages\Test\左漂浮.html" />
+    <Content Include="pages\Test\布局.html" />
+    <Content Include="pages\Test\布局2.html" />
+    <Content Include="pages\Test\开始CSS.html" />
+    <Content Include="pages\Test\开始布局.html" />
+    <Content Include="pages\Test\猎聘练习.html" />
+    <Content Include="pages\Test\猎聘练习2.html" />
+    <Content Include="pages\Test\百度.html" />
+    <Content Include="pages\Test\第一天.html" />
+    <Content Include="pages\Test\第二天.html" />
+    <Content Include="pages\Test\练习.html" />
+    <Content Include="pages\Test\绝对定位.html" />
+    <Content Include="pages\Test\自己的练习   花百度.html" />
+    <Content Include="pages\Test\自己的练习css.html" />
+    <Content Include="pages\Test\自己的练习开始布局.html" />
+    <Content Include="xml\myXml..xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\tp_files\saved_resource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pages\loginModel\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49513</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49513/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

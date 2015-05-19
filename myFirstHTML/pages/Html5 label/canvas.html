@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+如何通过 canvas 元素来显示一个红色的矩形：
+<canvas id="myCanvas"></canvas>
+
+<script type="text/javascript">
+
+    var canvas=document.getElementById('myCanvas');
+    var ctx=canvas.getContext('2d');
+    ctx.fillStyle='#FF0000';
+    ctx.fillRect(0,0,80,100);
+
+</script>
+
+
+</body>
+</html>

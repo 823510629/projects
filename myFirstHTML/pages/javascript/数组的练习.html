@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script language="JavaScript">
+        function ShowBaseName(filespec){
+            var fso,s= "";
+            fso = new ActiveXObject("Scripting.FileSystemObject");
+            s += fso.GetBaseName(filespec);
+            alert(s);
+        }
+        showBaseName("d:\\word\\javascript\\mycolor.htm");
+
+        function GetDriveletter(path){
+            var fso,s ="";
+            fso = new ActiveXObject("Scripting.FileSystemObject");
+            s += fso.GetDrive(fso.GetDriveName(path));
+            alert(s);
+        }
+        showBaseName("d:\\word\\javascript\\mycolor.htm");
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

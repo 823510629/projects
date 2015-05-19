@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!--外部引用样式-->
+    <link rel="stylesheet" rev="stylesheet" href="../../css/startCss.css"/>
+
+    <!--行外样式-->
+    <style type="text/css">
+        div {
+            color: red
+        }
+
+        #abc {
+            color: blue
+        }
+
+        .myClass {
+            border: dashed 4px red;
+            border-bottom: solid 5px black;
+        }
+
+        /*#myid span {*/
+            /*color: red*/
+        /*}*/
+        /*#myid span a {*/
+            /*color: red*/
+        /*}*/
+
+        #myid span,#myid span a{
+            color: red
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+行内样式
+<div class="myClass" style="font-size:30px; text-align: center ">我的第一个css哦</div>
+<div class="myClass" style="font-size:30px ">我的第一个css哦</div>
+<span id="abc">我的第一个css哦</span>
+
+<div id="myid">
+    <span>aaaaaaaaaaa</span>
+    <span>bbbbbbb</span>
+    <span>ddddddddd  <a href="#">google.com</a></span>
+    <span>ccccccccccccc  <a href="#">baidu.com</a> </span>
+</div>
+
+</body>
+</html>

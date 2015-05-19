@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>美食小菜谱</title>
+    <style type="text/css">
+    </style>
+    <script src="../../javascript/jquery-1.11.2.min.js"></script>
+
+    <script>
+        $(function () {
+
+            //页面加载完成后默认调用搜索函数  加载页面数据
+            search();
+
+            //点击搜索按钮  重新搜索数据
+            $("#btnSearch").click(function () {
+                search();
+            });
+
+        });
+
+        //搜索菜谱
+        function search() {
+
+            //获取文本框输入值
+            var txt = $("#txtSearch").val();
+            txt = $.trim(txt);//清除空格
+
+            //如果搜索内容为空  返回函数  不执行下面搜索代码
+            if (txt == "") {
+                alert("亲，请输入您要搜索的菜谱名称哦！");
+                return;
+            }
+
+            //请求菜谱数据的api地址  并且将文本框输入的值拼接到menu参数中
+            var url = "http://apis.juhe.cn/cook/query?key=96e775c1dc09f7324d6bb4d01f18b08a&menu=" + txt + "&rn=20 &pn=0";
+
+            //请求数据开始
+            $.ajax({
+                url: url,//请求地址
+                type: "POST",//请求方式  GET\POST
+                async: true,//true：异步   false：同步
+                dataType: "jsonp",//跨域请求  ==》使用jsonp数据格式
+                success: function (data) {
+
+                    //成功返回数据
+
+                    //清空页面数据
+                    $("#items").html("");
+
+                    //定位到所有菜谱数组节点
+                    var items = data.result.data;
+
+                    //循环菜谱节点
+                    $.each(items, function (index, item) {
+
+                        //将每项菜谱模板与数据拼接  ==》包含数据的html代码
+                        var itemHrml = '<div class="item"><img  src="' + item.albums[0] + '"/><span class="title">"' + item.title + '"</span><span class="tag">"' + item.tags + '"</span></div>';
+                        //将包含数据的当前菜谱html代码 追加到内容层内
+                        $("#items").append(itemHrml);
+
+                    });
+                }
+            });
+
+        }
+
+    </script>
+
+    <style>
+        body, html, * {
+            padding: 0px;
+            margin: 0px;
+            font-size: 12px;
+            color: #444444;
+            font-family: Arial, Tahoma, sans-serif
+        }
+
+        #items {
+            width: 900px;
+            border: solid 1px red;
+            min-height: 1000px;
+            margin: auto;
+            border: solid 1px #D8DDE3;
+        }
+
+        #items .item {
+            width: 200px;
+            height: 210px;
+            border: solid 1px #D8DDE3;
+            float: left;
+            margin: 10px
+        }
+
+        #items .item img {
+            display: block;
+            height: 150px;
+            width: 180px;
+            margin: auto;
+            margin-top: 5px;
+        }
+
+        #items .item .title {
+            text-align: center;
+            margin: 5px;
+            display: block
+        }
+
+        #items .item .tag {
+            display: block;
+            width: 200px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 2px;
+        }
+
+        #divSearch {
+            width: 320px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #divSearch input {
+            border: solid 1px #D8DDE3;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #txtSearch {
+            width: 200px;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #777777;
+        }
+
+        #btnSearch {
+            width: 80px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="divSearch">
+
+    <input id="txtSearch" value="红烧肉" type="text"/>
+    <input type="button" id="btnSearch" value="搜索"/>
+</div>
+
+
+<div id="items">
+
+    <!--<div class="item">-->
+    <!--<img  src="http://img.juhe.cn/cookbook/t/1/307_874685.jpg"/>-->
+    <!--<span class="title">牛肉牛肉牛肉牛肉牛肉</span>-->
+    <!--<span class="tag">家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 </span>-->
+    <!--</div>-->
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+
+        var jiaGe = 100;
+        var shuLiang = 10;
+        var shuLiang1 = 50;
+        var shuLiang2 = 60;
+
+        //10个多少钱
+        var zongJia1 = jiaGe * shuLiang;
+        document.write(zongJia1 + "<br/>");
+
+        //50个多少钱
+        var zongJia2 = jiaGe * shuLiang1;
+        document.write(zongJia2 + "<br/>");
+
+
+        //  var  ->  string  char  int  float bool
+
+        var name = "xiaoming"; //  string  字符串
+
+        var pi = 3.1415926;  //  float 浮点型
+
+        var isReturn = false; // bool  0 -> false  1 -> true
+
+        var age = 18; // int
+
+        var a = 'a';  // char 字符  单引号
+
+        //  输出到页面 -》 括号中的内容
+        //document.write(pi);
+
+        document.write("任何内容");
+
+        document.write(123456789);
+
+        var r = 23;
+
+        var length = r * pi;
+
+        var a = 10;
+        var b = 20;
+        var c = a + b;
+
+        var d = b / a;
+
+        document.write("<br/>" + d);
+
+        document.write("<br/>");
+
+        var isF = false;
+        document.write("var isF = " + isF);
+        document.write("<br/>");
+        document.write("!isF = " + !isF);
+
+        document.write("<br/>");
+        //  运算符
+
+        var x = 20;
+        x++;  //
+        //  ++ -》  x+1      -- -》 x -1
+        document.write(x);
+        document.write("<br/>");
+        x--;
+        document.write(x);
+        document.write("<br/>");
+
+        var isDaYu = 5 > 3; //==》  true
+        document.write("5 > 3 是" + isDaYu);
+
+        document.write("<br/>");
+
+        isDaYu = 5 < 3;
+        document.write("5 < 3 是" + isDaYu);
+
+        document.write("<br/>");
+        document.write(5 >= 5);
+
+        document.write("<br/>");
+        document.write(5 <= 5);
+
+
+        document.write("<br/>");
+
+        document.write("<br/> 逻辑运算符 && ");
+
+        var a = 5 > 4; // true  1  真
+        var b = 5 < 4;  // false  0  假
+        document.write("<br/>");
+
+        //当a 为 true 时 且  b 为true 时  c 才为 true
+        var c = a && b;
+
+        document.write(c);
+
+        document.write("<br/>------------------------------if else 条件判断语句------------------------------------<br/>");
+
+        var aa = 1, bb = 2;
+        if (bb > aa) {
+            document.write("aa > bb");
+        } else if (aa < bb) {
+            document.write("aa == bb");
+        }
+        else if (aa <= bb) {
+            document.write("aa == bb");
+        }
+        else {
+            document.write("不知道哦！！");
+        }
+
+        document.write("<br/><br/>------------------------------for 循环------------------------------------<br/>");
+        for (var i = 1; i < 10; i++) {
+            document.write("进入次数=" + i + "       ");
+        }
+
+        document.write("<br/><br/>------------------------------while 循环------------------------------------<br/>");
+        var ww = 1;
+        while (ww < 11) {
+            document.write("进入次数=" + ww + "       ");
+            ww++;
+        }
+
+        document.write("<br/><br/>------------------------------switch 选择表达式------------------------------------<br/>");
+        var hobby = "洗澡";
+        switch (hobby) {
+            case "羽毛球":
+                document.write("我的爱好是羽毛球");
+                break;
+            case "洗澡":
+                document.write("我的爱好是洗澡");
+                break;
+            default :
+                document.write("我没有爱好！！");
+                break;
+        }
+
+
+        document.write("<br/><br/>--------------------------------函数------------------------------<br/>");
+
+        function showMsg() {
+            alert("调用函数成功")
+            var ss = confirm("想好了吗")
+            alert(ss);
+        }
+
+        function dblClick() {
+            alert("调用双击事件成功")
+        }
+
+        function jiafa(first, second) {
+            var result = jiSuan(first, second, "+");
+            alert(result);
+        }
+        function jianfa(first, second) {
+            var result = jiSuan(first, second, "-");
+            alert(result);
+        }
+
+        function jiafa123() {
+            var f = document.getElementbyId("txtFirst").value;//获取第一个框子的值
+            var f = document.getElementbyId("txtSend").value;//获取第二个框子的值
+
+            var first = parseFloat(f);//将第一个输入框子的值转换成小数类型的值
+            var second = parseFloat(s);//将第一个输入框子的值转换成小数类型的值
+
+            var result = jisuan(first, second, "+");//调用计算的函数，并且用变量result接受计算结果
+
+            document.getElementById("txtResult").value = result;//将计算结果赋给结果框
+
+        }
+
+        function jiSuan(first, second, op) {
+            if (op == "+") {
+                var result = first + second;
+                return result;
+            }
+            if (op == "-") {
+                var result = first - second;
+                return result;
+            }
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+
+<button onclick="showMsg()">点击事件调用函数</button>
+<button ondblclick="dblClick()">双击事件调用函数</button>
+<button onclick="jiaFa(1,3)">调用函数计算1+3</button>
+<button onclick="jianFa(10,3)">调用函数计算10-3</button>
+
+<br/><br/>
+第一个值：<input id="txtFirst" type="text"/>
+第一个值：<input id="txtSend" type="text"/>
+结果：<input id="txtResult" type="text"/>
+<button onclick="jiaFa123()">调用加法</button>
+</body>
+</html>

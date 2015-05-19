@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="application/javascript" src="../javascript/jquery-1.11.2.js"></script>
+    <script type="application/javascript">
+        //for循环    continue 、break
+        for (var i = 1; i < 20; i += 2) {
+
+            if (i == 5) {
+                document.write("本次循环不继续，重新进行下一次循环<br/>");
+                continue;
+            }
+
+            if (i == 15) {
+                document.write(i + "   for循环终止，跳出循环<br/>");
+                break;
+            }
+
+            document.write(i + "<br/>");
+        }
+
+        //函数的定义与调用、
+        function myFun(a, b, c) {
+            var retval = 0;
+
+            if (a != undefined)retval += a;
+
+            if (b != undefined)retval += b;
+
+            if (c != undefined)retval += c;
+
+            return retval;
+        }
+
+        function jiafa(a1, b1, c1) {
+            var retval = myFun(a1, b1, c1);
+            alert(retval);
+        }
+
+        //内部函数的定义与调用
+        function add(a, b) {
+
+            var retval = 0;
+
+            function innerAdd() {
+                retval = a + b;
+            }
+
+            innerAdd();
+            alert(retval);
+        }
+
+        //递归
+        function diGui(number) {
+
+            if (number <= 1)return 1;
+
+            return diGui(number - 1) * number;
+        }
+
+        function zhu(name){
+
+            if(name <= 1)return 1;
+
+            return zhu(name - 1)*name;
+
+        }
+
+        function urlBianma(){
+
+            var str = "中华人民共和国aaaaaa=%#";
+            var enStr = encodeURI(str);//编码
+            alert(enStr);
+
+            var deStr = decodeURI(enStr);//解码
+            alert(deStr);
+        }
+
+    </script>
+</head>
+<body oncopy="return false;" oncontextmenu="window.event.returnValue=false;">
+
+<input onpaste="return false" />
+
+<br/><br/>
+<a href="javascript:alert('fsdf')">href事件</a><br/><br/>
+
+<a id="myTop" href="#myInfo" onclick="">导航到[我的信息]</a><br/><br/>
+
+<a href="javascript:jiafa(2,3)">函数的定义与调用</a><br/><br/>
+
+<a href="javascript:add(2,3)">内部函数的定义与调用</a><br/><br/>
+
+<a href="javascript:alert(diGui(8))">递归函数的定义与调用</a><br/><br/>
+
+<a href="javascript:alert(zhu(5))">递归函数的调用</a><br/><br/>
+
+<a href="javascript:urlBianma()">encodeURI\decodeRUI</a><br/><br/>
+
+<div style="height: 2000px"></div>
+<a href="#myTop" id="myInfo">我的信息[导航到上面]</a>
+
+<div style="height: 2000px"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+
+        //更改浏览器状态栏文本
+        window.status = "状态更新中....";
+
+        //
+
+        function windowLoad() {
+            alert("页面加载完成。。。...........");
+        }
+
+        //为页面加载完成事件设置函数  -----> 同<body onload="windowLoad()">
+        //window.onload = windowLoad;
+
+        /*----------------date 日期开始------------------*/
+        //打印日期
+        function writeDate(d) {
+            var year = d.getFullYear();//获取年份
+            var month = d.getMonth() + 1;//获取
+            var day = d.getDate();//获取天
+            var hour = d.getHours();//获取时
+            var min = d.getMinutes();//获取分
+            var sen = d.getSeconds();//获取秒
+            var msen = d.getMilliseconds();//毫秒
+            document.write(year + "-" + month + "-" + day + "  " + hour + ":" + min + ":" + sen + ":" + msen + "<br/>"); //打印年月日
+        }
+
+
+        document.write('<br/>----------------------------------------Date对象-----------------------------------------------<br/>');
+        //var date = new Date("08 01,2008,12:12:12:123");//实例日期对象   默认值为当前日期
+        var date = new Date();//实例日期对象   默认值为当前日期
+        writeDate(date);
+
+        date.setYear(2016);
+        date.setMonth(6);
+        date.setDate(2);
+        date.setMinutes(34);
+        // ----
+        writeDate(date);
+        /*----------------date 日期结束------------------*/
+
+
+        /*----------------时钟定时器开始------------------*/
+        function myClock() {
+            var d = new Date();//实例日期对象   默认值为当前日期
+            var year = d.getFullYear();//获取年份
+            var month = d.getMonth() + 1;//获取月份
+            var day = d.getDate();//获取天
+            var hour = d.getHours();//获取时
+            var min = d.getMinutes();//获取分
+            var sen = d.getSeconds();//获取秒
+
+            var myTime = year + "-" + month + "-" + day + "  " + hour + ":" + min + ":" + sen;
+
+            document.getElementById("txtClock").value = myTime;
+
+            setTimeout("myClock()",1000);
+
+        }
+        /*----------------时钟定时器结束------------------*/
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+<br/><br/><br/>
+
+<button onclick="window.alert('我的自定义提示框');">alert</button>
+<button onclick="window.confirm('确认提交么？');">confirm</button>
+<button onclick="window.open('http://www.baidu.com','_self' );">open self</button>
+<button onclick="window.open('http://www.baidu.com','_blank');">open blank</button>
+<button onclick="window.close();">close</button>
+<button onclick="window.showModalDialog('第一章.html','AAA','dialogWidth=900px;dialogHeight=600px');">showModalDialog
+    google不支持，IE支持
+</button>
+<button onclick="history.back();">退回</button>
+<a href="第一章.html">导航到第一章</a>
+<button onclick="history.forward();">下一个页面</button>
+
+
+<button onclick="alert(location.host);">获取地址栏Host</button>
+<button onclick="alert(location.hostname);">获取地址栏HostName</button>
+<button onclick="alert(location.href);">获取地址栏href</button>
+<button onclick="location.reload();">刷新网页</button>
+
+
+<br/><br/><br/>
+<input id="txtClock" value="" type="text"/>
+<button onclick="myClock()">时钟开始</button>
+
+
+</body>
+</html>

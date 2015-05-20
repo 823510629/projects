@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>美食小菜谱</title>
+    <style type="text/css">
+    </style>
+    <script src="../../../javascript/jquery-1.11.2.min.js"></script>
+
+    <script>
+
+        //全局对象  保存所有分类信息，包含一级和二级分类
+        var allCategoryList = {};
+
+        //加载事件
+        $(function () {
+
+            //页面加载完成后默认调用搜索函数  加载页面数据
+           search();
+
+            //加载第一级分类
+            loadCategory();
+
+            //点击搜索按钮  重新搜索数据
+            $("#btnSearch").click(function () {
+                search();
+            });
+        });
+
+        //搜索菜谱
+        function search() {
+
+            //获取文本框输入值
+            var txt = $("#txtSearch").val();
+            txt = $.trim(txt);//清除空格
+
+            //如果搜索内容为空  返回函数  不执行下面搜索代码
+            if (txt == "") {
+                alert("亲，请输入您要搜索的菜谱名称哦！");
+                return;
+            }
+
+            //请求菜谱数据的api地址  并且将文本框输入的值拼接到menu参数中
+            var url = "http://apis.juhe.cn/cook/query?key=96e775c1dc09f7324d6bb4d01f18b08a&menu=" + txt + "&rn=12&pn=0";
+
+            requestData(url);
+
+        }
+
+        //请求并加载一级分类
+        function loadCategory() {
+
+            //请求菜谱数据的api地址  并且将文本框输入的值拼接到menu参数中
+            var url = "http://apis.juhe.cn/cook/category?key=96e775c1dc09f7324d6bb4d01f18b08a";
+            //请求数据开始
+            $.ajax({
+                url: url,//请求地址
+                type: "POST",//请求方式  GET\POST
+                async: true,//true：异步   false：同步
+                dataType: "jsonp",//跨域请求  ==》使用jsonp数据格式
+                success: function (data) {
+
+                    //定位到所有菜谱数组节点
+                    var items = data.result;
+
+                    //将所有分类信息数据保存到全局变量中
+                    allCategoryList = items;
+
+                    $.each(items, function (index, item) {
+                        //将每项菜谱模板与数据拼接  ==》包含数据的html代码
+                        var itemHrml = '<span data-parentId="' + item.parentId + '">' + item.name + '</span>';
+                        //将包含数据的当前菜谱html代码 追加到内容层内
+                        $("#Category").append(itemHrml);
+                    });
+
+                    //为一级菜单赋点击事件：显示二级分类
+                    showDetailCategory();
+
+                }
+            });
+
+        }
+
+        //为一级菜单赋点击事件：显示二级分类
+        function showDetailCategory() {
+
+            //点击菜谱分类
+            $("#Category span").click(function () {
+                //修改样式 改变背景色
+                $(this).css("background-color", "#FF5C00").siblings().css("background-color", "");
+
+                //根据当前分类搜索数据
+                $("#CategoryDetail").slideDown();
+
+                //获取当前一级分类的ID
+                var parentId = $(this).attr("data-parentId");
+                //alert(parentId);
+                //根据parentId查询所对应的二级菜单节点
+                var category = $.grep(allCategoryList, function (item) {
+                    return item.parentId == parentId;
+                })[0];
+
+                //二级菜单数组
+                var secondLevelList = category.list;
+
+                //清空二级菜单内容
+                $("#CategoryDetail").html("");
+
+                //循环二级菜单数组 并且追加到二级菜单对应的DIV中
+                $.each(secondLevelList, function (index, item) {
+                    //将每项菜谱模板与数据拼接  ==》包含数据的html代码
+                    var itemHrml = '<span data-id="' + item.id + '">' + item.name + '</span>';
+                    //将包含数据的当前菜谱html代码 追加到内容层内
+                    $("#CategoryDetail").append(itemHrml);
+                });
+
+                //点击二级菜单事件
+                categorySearch();
+
+            });
+
+        }
+
+        //点击二级菜单  查询数据
+        function categorySearch() {
+
+            //点击菜谱分类
+            $("#CategoryDetail span").click(function () {
+
+                //修改样式 改变背景色
+                $(this).css("background-color", "#FF5C00").siblings().css("background-color", "");
+
+                //-----------------------------------重新搜索数据------------------------------------
+                //获取标签（二级菜单）的ID
+                var id = $(this).attr("data-id");
+                //拼接api请求地址
+                var url = "http://apis.juhe.cn/cook/index?key=96e775c1dc09f7324d6bb4d01f18b08a&cid=" + id;
+
+                requestData(url);
+
+            });
+
+        }
+
+        //请求菜谱数据  并且绑定到页面上
+        function requestData(requestUrl) {
+
+            //请求数据开始
+            $.ajax({
+                url: requestUrl,//请求地址
+                type: "POST",//请求方式  GET\POST
+                async: true,//true：异步   false：同步
+                dataType: "jsonp",//跨域请求  ==》使用jsonp数据格式
+                success: function (data) {
+
+                    //清空页面数据
+                    $("#items").html("");
+
+                    //定位到所有菜谱数组节点
+                    var items = data.result.data;
+
+                    $.each(items, function (index, item) {
+
+                        //将每项菜谱模板与数据拼接  ==》包含数据的html代码
+                        var itemHrml = '<div class="item"><a href="detail.html?id='+item.id+'" target="_blank"><img  src="' + item.albums[0] + '"/><span class="title">"' + item.title + '"</span><span class="tag">"' + item.tags + '"</span></a></div>';
+                        //将包含数据的当前菜谱html代码 追加到内容层内
+                        $("#items").append(itemHrml);
+
+                    });
+                }
+            });
+
+        }
+
+
+    </script>
+
+    <style>
+        body, html, * {
+            padding: 0px;
+            margin: 0px;
+            font-size: 12px;
+            color: #444444;
+            font-family: Arial, Tahoma, sans-serif
+        }
+
+        #main {
+            width: 900px;
+            margin: auto;
+        }
+
+        #items {
+
+            border: solid 1px red;
+            min-height: 700px;
+
+            border: solid 1px #D8DDE3;
+        }
+
+        #items .item {
+            width: 200px;
+            height: 210px;
+            border: solid 1px #D8DDE3;
+            float: left;
+            margin: 10px
+        }
+
+        #items .item img {
+            display: block;
+            height: 150px;
+            width: 180px;
+            margin: auto;
+            margin-top: 5px;
+        }
+
+        #items .item .title {
+            text-align: center;
+            margin: 5px;
+            display: block
+        }
+
+        #items .item .tag {
+            display: block;
+            width: 200px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 2px;
+        }
+
+        #divSearch {
+            width: 420px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #divSearch input {
+            border: solid 1px #D8DDE3;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #txtSearch {
+            width: 300px;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #777777;
+        }
+
+        #btnSearch {
+            width: 80px;
+        }
+
+        .Category {
+            margin-bottom: 20px;
+            line-height: 15px;;
+        }
+
+        .Category span {
+            border: solid 1px #D8DDE3;
+
+            padding: 3px 10px 3px 10px;
+            cursor: pointer;
+            display: inline-block;
+            width: 65px;
+            margin-bottom: 2px;
+            margin-right: 2px;
+        }
+
+        .Category span:hover {
+            background-color: #FF5C00
+        }
+
+        #CategoryDetail {
+            display: none
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="main">
+
+    <div style="text-align: center">
+        <img src="../../../images/5.png"/>
+    </div>
+
+    <div id="divSearch">
+        <input id="txtSearch" value="红烧肉" type="text"/>
+        <input type="button" id="btnSearch" value="搜索"/>
+    </div>
+
+
+
+    <div id="Category" class="Category">
+    </div>
+
+    <div id="CategoryDetail" class="Category">
+
+    </div>
+
+    <div id="items">
+        <!--<div class="item">-->
+        <!--<img  src="http://img.juhe.cn/cookbook/t/1/307_874685.jpg"/>-->
+        <!--<span class="title">牛肉牛肉牛肉牛肉牛肉</span>-->
+        <!--<span class="tag">家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 家常菜 荤菜 </span>-->
+        <!--</div>-->
+    </div>
+
+
+</div>
+
+</body>
+</html>
